@@ -11,13 +11,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/aarimala/CI-CD-demo.git'
       }
       }
-   stage("Maven clean build") {
-  steps { 
-    def mavenHome = tool name:"Maven-3.8.6", type: "maven"
-    def mavenCMD = "${mavenHome}/bin/mvn"
-    sh "${mavenCMD} clean package"
-   }
-}
+ stage ('Excute Maven') {
+      steps {
+        sh 'mvn package'
+      }
+    }
   }
 }
 stage ('docker build and tag') {
