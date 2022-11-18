@@ -3,7 +3,7 @@ pipeline {
   
   tools
   {
-    maven 'maven'
+	  maven 'maven'
   }
   stages {
     stage ('SCM Checkout') {
