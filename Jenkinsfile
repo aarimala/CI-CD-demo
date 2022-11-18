@@ -52,5 +52,4 @@ stage ('docker build and tag') {
 		    //sh "docker ssh://jenkins@13.232.248.1 run sunilraju99/my-webapp"
 	
             
-   }
-	  }    
+   
